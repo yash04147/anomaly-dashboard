@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Central Monitoring Dashboard</title>
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- Content -->
+    <div class="content">
+      <h2>AO Central Monitoring</h2>
+
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="tab active" onclick="loadTab('Database', this)">
+          Database
+        </div>
+        <div class="tab" onclick="loadTab('OMS', this)">OMS</div>
+        <div class="tab" onclick="loadTab('Thirdparties', this)">
+          Thirdparties
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Problem Title</th>
+              <th>Description</th>
+              <th>Affected Entities</th>
+              <th>Team</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+  </body>
+</html>

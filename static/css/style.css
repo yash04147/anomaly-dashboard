@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+}
+
+/* Top Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  background: white;
+  padding: 0 10px;
+}
+
+/* Tabs */
+.tab {
+  padding: 14px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #007bff;
+}
+
+.tab.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+
+/* Page Content */
+.content {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table container */
+.table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Badge styles */
+.badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+}
+
+.team-dba {
+  background: #dc3545;
+}
+
+.team-oms {
+  background: #28a745;
+}
+
+.team-third {
+  background: #ffc107;
+  color: black;
+}
