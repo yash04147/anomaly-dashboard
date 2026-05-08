@@ -29,6 +29,11 @@ def get_anomalies(system):
 
     return jsonify(anomaly_store[system])
     
+@app.route("/webhook", methods=["GET"])
+def webhook_test():
+    return {
+        "status": "webhook reachable"
+    }
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
