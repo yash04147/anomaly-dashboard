@@ -38,24 +38,19 @@ def webhook_test():
 @app.route("/webhook", methods=["POST"])
 def webhook():
 
-    payload = request.json
+    print("========== WEBHOOK RECEIVED ==========")
 
-    print("Webhook Payload Received:")
-    print(payload)
+    print("Headers:")
+    print(dict(request.headers))
 
-    # Replace old Thirdparties data completely
-    anomaly_store["Thirdparties"] = []
+    print("Raw Data:")
+    print(request.data)
 
-    # If Splunk sends list of results
-    if isinstance(payload, list):
-        anomaly_store["Thirdparties"] = payload
-
-    # If Splunk sends single object
-    else:
-        anomaly_store["Thirdparties"].append(payload)
+    print("JSON:")
+    print(request.json)
 
     return {
-        "status": "success"
+        "status": "received"
     }, 200
 
 
